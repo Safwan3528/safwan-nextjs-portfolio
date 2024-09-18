@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import {
@@ -93,9 +94,11 @@ export function PortfolioComponent() {
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <img
-              src="/image/profile-image.png"
+            <Image
+              src="/image/profile.jpg"
               alt="Safwan Rahimi"
+              width={800}
+              height={500}
               className="w-40 h-40 rounded-full mx-auto border-4 border-blue-500 shadow-lg"
             />
           </motion.div>
@@ -204,7 +207,7 @@ export function PortfolioComponent() {
             animate={controls}
             custom={0}
           >
-            I'm a passionate fullstack developer with a strong foundation in
+            I am a passionate fullstack developer with a strong foundation in
             both front-end and back-end technologies. I love creating elegant,
             efficient, and user-friendly web applications.
           </motion.p>
@@ -306,9 +309,11 @@ export function PortfolioComponent() {
                 animate={controls}
                 custom={index}
               >
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={800}
+                  height={500}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
