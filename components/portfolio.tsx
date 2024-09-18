@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import {
   Moon,
   Sun,
@@ -43,7 +44,7 @@ export function PortfolioComponent() {
               transition={{ duration: 0.5 }}
             >
               <a href="#" className="text-2xl font-bold">
-                SR
+                {/*Logo*/}
               </a>
             </motion.div>
             <ul className="flex space-x-4 items-center">
@@ -61,7 +62,7 @@ export function PortfolioComponent() {
               </motion.li>
               <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                 <a
-                  href="https://github.com/safwanrahimi"
+                  href="https://github.com/safwan3528"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-current"
@@ -71,7 +72,7 @@ export function PortfolioComponent() {
               </motion.li>
               <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                 <a
-                  href="https://linkedin.com/in/safwanrahimi"
+                  href="https://www.linkedin.com/in/safwanrahimi/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-current"
@@ -93,7 +94,7 @@ export function PortfolioComponent() {
             className="mb-8"
           >
             <img
-              src="/placeholder.svg?height=200&width=200"
+              src="/image/profile-image.png"
               alt="Safwan Rahimi"
               className="w-40 h-40 rounded-full mx-auto border-4 border-blue-500 shadow-lg"
             />
@@ -112,7 +113,22 @@ export function PortfolioComponent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Fullstack Developer
+            <TypeAnimation
+              sequence={[
+                "Fullstack Developer",
+                1000,
+                "Web Developer",
+                1000,
+                "Mobile Developer",
+                1000,
+                "Software Engineer",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: "2em", display: "inline-block" }}
+              repeat={Infinity}
+            />
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -138,7 +154,7 @@ export function PortfolioComponent() {
             </div>
             <div className="flex space-x-4 mt-4">
               <motion.a
-                href="https://github.com/safwanrahimi"
+                href="https://github.com/Safwan3528"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition duration-300 flex items-center"
@@ -164,7 +180,7 @@ export function PortfolioComponent() {
                 className={`${
                   darkMode
                     ? "bg-yellow-400 text-gray-900"
-                    : "bg-gray-800 text-white"
+                    : "bg-black text-white"
                 } px-4 py-2 rounded-full hover:bg-opacity-90 transition duration-300 flex items-center`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -231,7 +247,7 @@ export function PortfolioComponent() {
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                   <motion.div
-                    className="bg-blue-600 h-2.5 rounded-full"
+                    className="bg-red-800 h-2.5 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: `${skill.level}%` }}
                     transition={{ duration: 1, delay: index * 0.1 }}
@@ -321,14 +337,14 @@ export function PortfolioComponent() {
               </h3>
               <div className="flex flex-col space-y-4">
                 <a
-                  href="mailto:safwan@example.com"
+                  href="mailto:safwan.rahimi87@gmail.com"
                   className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
                 >
                   <Mail className="w-5 h-5" />
-                  <span>safwan@example.com</span>
+                  <span>safwan.rahimi87@gmail.com</span>
                 </a>
                 <a
-                  href="https://github.com/safwanrahimi"
+                  href="https://github.com/Safwan3528"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
@@ -403,7 +419,7 @@ export function PortfolioComponent() {
 
       <footer className="bg-gray-100 dark:bg-gray-800 py-6 mt-20">
         <div className="container mx-auto px-6 text-center">
-          <p>&copy; 2023 Safwan Rahimi. All rights reserved.</p>
+          <p>&copy; 2024 Safwan Rahimi. All rights reserved.</p>
         </div>
       </footer>
     </div>
