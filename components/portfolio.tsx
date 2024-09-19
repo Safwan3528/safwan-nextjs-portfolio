@@ -4,17 +4,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FaEye } from "react-icons/fa";
-import {
-  Moon,
-  Sun,
-  Github,
-  Linkedin,
-  Mail,
-  Send,
-  Download,
-  Eye,
-} from "lucide-react";
+
+import { Moon, Sun, Github, Linkedin, Mail, Download, Eye } from "lucide-react";
 
 export function PortfolioComponent() {
   const [darkMode, setDarkMode] = useState(false);
@@ -268,61 +259,43 @@ export function PortfolioComponent() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                title: "React Portfolio",
+                image: "/image/projects/1.png?height=200&width=300",
+                gitUrl: "https://github.com/Safwan3528/my-nextjs-portfolio",
+                projectUrl: "https://safwanrahimi.netlify.app/",
+              },
+              {
                 title: "E-commerce Platform",
-                description:
-                  "A full-featured online store built with React and Node.js",
-                image: "/placeholder.svg?height=200&width=300",
-                gitUrl: "https://github.com/Safwan3528/ecommerce-platform",
-                projectUrl: "https://ecommerce-platform.netlify.app",
+                image: "/image/projects/3.png?height=200&width=300",
+                gitUrl:
+                  "https://github.com/Safwan3528/codeigniter-ecommerce-website",
+                projectUrl: "https://ecommerce-netlify.netlify.app/",
               },
               {
-                title: "Task Management App",
-                description:
-                  "A productivity tool created using React Native and Firebase",
-                image: "/placeholder.svg?height=200&width=300",
-                gitUrl: "https://github.com/Safwan3528/task-management-app",
-                projectUrl: "https://task-management-app.netlify.app",
-              },
-              {
-                title: "Data Visualization Dashboard",
-                description:
-                  "An interactive dashboard built with D3.js and Express",
-                image: "/placeholder.svg?height=200&width=300",
+                title: "Food Ordering Application",
+                image: "/image/projects/4.png?height=200&width=300",
                 gitUrl:
                   "https://github.com/Safwan3528/data-visualization-dashboard",
-                projectUrl: "https://data-visualization-dashboard.netlify.app",
+                projectUrl: "https://food-delivery-app-ui.netlify.app/",
               },
               {
-                title: "Social Media Analytics Tool",
-                description:
-                  "A tool for analyzing social media trends using Python and machine learning",
-                image: "/placeholder.svg?height=200&width=300",
+                title: "React Firebase Template",
+                image: "/image/projects/5.png?height=200&width=300",
                 gitUrl:
                   "https://github.com/Safwan3528/social-media-analytics-tool",
                 projectUrl: "https://social-media-analytics-tool.netlify.app",
               },
               {
-                title: "Personal Finance Tracker",
-                description:
-                  "A web app to help users manage their finances, built with Vue.js and Django",
-                image: "/placeholder.svg?height=200&width=300",
+                title: "Fullstack Roadmap",
+                image: "/image/projects/6.png?height=200&width=300",
                 gitUrl:
                   "https://github.com/Safwan3528/personal-finance-tracker",
                 projectUrl: "https://personal-finance-tracker.netlify.app",
               },
-              {
-                title: "Real-time Chat Application",
-                description:
-                  "A chat app with real-time messaging using Socket.io and React",
-                image: "/placeholder.svg?height=200&width=300",
-                gitUrl:
-                  "https://github.com/Safwan3528/real-time-chat-application",
-                projectUrl: "https://real-time-chat-application.netlify.app",
-              },
             ].map((project, index) => (
               <motion.div
                 key={project.title}
-                className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+                className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 relative group"
                 initial={{ opacity: 0, y: 20 }}
                 animate={controls}
                 custom={index}
@@ -339,26 +312,25 @@ export function PortfolioComponent() {
                     {project.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    {project.description}
                   </p>
-                  <div className="flex justify-between mt-4">
+                </div>
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex space-x-4">
                     <a
                       href={project.gitUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
+                      className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-200 transition duration-300"
                     >
-                      <code className="text-lg">&lt;/&gt;</code>
-                      <span>GitHub</span>
+                      <Github className="w-6 h-6" />
                     </a>
                     <a
                       href={project.projectUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
+                      className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-200 transition duration-300"
                     >
-                      <Eye className="w-5 h-5" />
-                      <span>Live Demo</span>
+                      <Eye className="w-6 h-6" />
                     </a>
                   </div>
                 </div>
