@@ -311,8 +311,7 @@ export function PortfolioComponent() {
                   <h3 className="text-xl font-semibold mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                  </p>
+                  <p className="text-gray-600 dark:text-gray-300"></p>
                 </div>
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex space-x-4">
