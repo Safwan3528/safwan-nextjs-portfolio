@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { FaEye } from "react-icons/fa";
 import {
   Moon,
   Sun,
@@ -12,6 +13,7 @@ import {
   Mail,
   Send,
   Download,
+  Eye,
 } from "lucide-react";
 
 export function PortfolioComponent() {
@@ -141,7 +143,7 @@ export function PortfolioComponent() {
           >
             <div className="flex space-x-4">
               <a
-                href="#contact"
+                href="https://api.whatsapp.com/send?phone=601156370422"
                 className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300"
               >
                 Get in touch
@@ -152,7 +154,7 @@ export function PortfolioComponent() {
                 className="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition duration-300 flex items-center"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Download Resume
+                Resume
               </a>
             </div>
             <div className="flex space-x-4 mt-4">
@@ -270,41 +272,57 @@ export function PortfolioComponent() {
                 description:
                   "A full-featured online store built with React and Node.js",
                 image: "/placeholder.svg?height=200&width=300",
+                gitUrl: "https://github.com/Safwan3528/ecommerce-platform",
+                projectUrl: "https://ecommerce-platform.netlify.app",
               },
               {
                 title: "Task Management App",
                 description:
                   "A productivity tool created using React Native and Firebase",
                 image: "/placeholder.svg?height=200&width=300",
+                gitUrl: "https://github.com/Safwan3528/task-management-app",
+                projectUrl: "https://task-management-app.netlify.app",
               },
               {
                 title: "Data Visualization Dashboard",
                 description:
                   "An interactive dashboard built with D3.js and Express",
                 image: "/placeholder.svg?height=200&width=300",
+                gitUrl:
+                  "https://github.com/Safwan3528/data-visualization-dashboard",
+                projectUrl: "https://data-visualization-dashboard.netlify.app",
               },
               {
                 title: "Social Media Analytics Tool",
                 description:
                   "A tool for analyzing social media trends using Python and machine learning",
                 image: "/placeholder.svg?height=200&width=300",
+                gitUrl:
+                  "https://github.com/Safwan3528/social-media-analytics-tool",
+                projectUrl: "https://social-media-analytics-tool.netlify.app",
               },
               {
                 title: "Personal Finance Tracker",
                 description:
                   "A web app to help users manage their finances, built with Vue.js and Django",
                 image: "/placeholder.svg?height=200&width=300",
+                gitUrl:
+                  "https://github.com/Safwan3528/personal-finance-tracker",
+                projectUrl: "https://personal-finance-tracker.netlify.app",
               },
               {
                 title: "Real-time Chat Application",
                 description:
                   "A chat app with real-time messaging using Socket.io and React",
                 image: "/placeholder.svg?height=200&width=300",
+                gitUrl:
+                  "https://github.com/Safwan3528/real-time-chat-application",
+                projectUrl: "https://real-time-chat-application.netlify.app",
               },
             ].map((project, index) => (
               <motion.div
                 key={project.title}
-                className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={controls}
                 custom={index}
@@ -323,6 +341,26 @@ export function PortfolioComponent() {
                   <p className="text-gray-600 dark:text-gray-300">
                     {project.description}
                   </p>
+                  <div className="flex justify-between mt-4">
+                    <a
+                      href={project.gitUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
+                    >
+                      <code className="text-lg">&lt;/&gt;</code>
+                      <span>GitHub</span>
+                    </a>
+                    <a
+                      href={project.projectUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
+                    >
+                      <Eye className="w-5 h-5" />
+                      <span>Live Demo</span>
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -368,56 +406,6 @@ export function PortfolioComponent() {
                 </a>
               </div>
             </motion.div>
-            <motion.form
-              className="space-y-4"
-              initial={{ opacity: 0, x: 20 }}
-              animate={controls}
-              custom={1}
-            >
-              <div>
-                <label htmlFor="name" className="block mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full p-2 border rounded dark:bg-gray-800 dark:border-gray-700"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full p-2 border rounded dark:bg-gray-800 dark:border-gray-700"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full p-2 border rounded dark:bg-gray-800 dark:border-gray-700"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 flex items-center"
-              >
-                <Send className="w-4 h-4 mr-2" />
-                Send Message
-              </button>
-            </motion.form>
           </div>
         </section>
       </main>
