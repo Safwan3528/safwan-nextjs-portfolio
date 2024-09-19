@@ -246,7 +246,7 @@ export function PortfolioComponent() {
                     className="bg-red-800 h-2.5 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1, delay: index * 0.1 }}
+                    transition={{ duration: 15, delay: index * 0.1 }}
                   ></motion.div>
                 </div>
               </motion.div>
