@@ -1,6 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Portfolio Website
+
+![safwan-portfolio 2](https://github.com/user-attachments/assets/b5aa50c9-af8e-4586-8641-24a9264a5a38)
+
 https://safwanrahimi.vercel.app/
 
 ## Getting Started
