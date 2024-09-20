@@ -279,10 +279,10 @@ export function PortfolioComponent() {
                 projectUrl: "https://food-delivery-app-ui.netlify.app/",
               },
               {
-                title: "React Firebase Template",
+                title: "School Management System",
                 image: "/image/projects/5.png?height=200&width=300",
                 gitUrl:
-                  "https://github.com/Safwan3528/social-media-analytics-tool",
+                  "https://github.com/Safwan3528/school-management-system",
                 projectUrl: "https://social-media-analytics-tool.netlify.app",
               },
               {
