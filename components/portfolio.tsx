@@ -286,6 +286,25 @@ export function PortfolioComponent() {
                 projectUrl: "https://social-media-analytics-tool.netlify.app",
               },
               {
+                title: "Facebook Ads Service Landing Page",
+                image: "/image/projects/7.png?height=200&width=300",
+                gitUrl:
+                  "https://github.com/Safwan3528/landing-page-adsintelligent",
+                projectUrl: "https://adsintelligent.netlify.app",
+              },
+              {
+                title: "Invoice Generator",
+                image: "/image/projects/8.png?height=200&width=300",
+                gitUrl: "https://github.com/Safwan3528/invoice-generator",
+                projectUrl: "https://einvoice-generator.netlify.app",
+              },
+              {
+                title: "Internet Speedtest",
+                image: "/image/projects/9.png?height=200&width=300",
+                gitUrl: "https://github.com/Safwan3528/internet-speedtest",
+                projectUrl: "https://internet-speedtest-meter.netlify.app",
+              },
+              {
                 title: "Fullstack Roadmap",
                 image: "/image/projects/6.png?height=200&width=300",
                 gitUrl:
